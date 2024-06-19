@@ -1,6 +1,13 @@
 import streamlit as st
 import pandas as pd
 
+
+try:
+    import openpyxl
+    st.success("openpyxl imported successfully.")
+except ImportError as e:
+    st.error(f"Failed to import openpyxl: {e}")
+
 st.subheader("Drought in Odisha")
 st.markdown("Odisha faces frequent droughts, particularly in western districts like Bolangir and Kalahandi. These dry spells can significantly impact agriculture, the main source of income for many residents. The state government and disaster management authorities work together to monitor droughts, provide assistance to farmers, and implement mitigation strategies.")
 st.divider()
