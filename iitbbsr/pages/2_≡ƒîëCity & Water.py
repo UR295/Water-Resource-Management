@@ -2,6 +2,12 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
+try:
+    import matplotlib.pyplot as plt
+    st.success("matplotlib imported successfully.")
+except ImportError as e:
+    st.error(f"Failed to import matplotlib: {e}")
+
 # City data (replace with your actual data)
 data = {
     "City": [
